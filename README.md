@@ -38,9 +38,8 @@ Configuration Settings in project's AppDelegate.m
 ## Installation
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
 
-pod 'LogKit'
+pod 'CocoaLogKit'
 // pod 'CocoaLumberjack'
 // pod 'SSZipArchive'
 ```
