@@ -33,22 +33,22 @@
 #pragma mark - Log
 ///-------------------------
 /**!
- * @brief   Configure and add a recorder with console logs
+ * @brief  Configure and add a recorder with console logs
 */
 + (void)addDashboardLogger;
 
 /**!
- * @brief   Configure and add a DDASLLogger (Apple System Log)
+ * @brief  Configure and add a DDASLLogger (Apple System Log)
 */
 + (void)addASLLogger;
 
 /**!
- * @brief   Configure and add a DDTTYLogger (Apple System Log and Xcode console),if the method has already been executed, there is no need to perform the function 'addASLLogger'
+ * @brief  Configure and add a DDTTYLogger (Apple System Log and Xcode console),if the method has already been executed, there is no need to perform the function 'addASLLogger'
 */
 + (void)addTTYLogger;
 
 /**!
- * @brief   Send the log to the file (default for non debug builds),requied this method if you want send log files to mail
+ * @brief  Send the log to the file (default for non debug builds),requied this method if you want send log files to mail
 */
 + (void)addFileLogger;
 
@@ -57,17 +57,17 @@
 ///-------------------------
 /**!
  *
- * @brief   Sets the mailbox collection that receives log files (default is empty)
+ * @brief  Sets the mailbox collection that receives log files (default is empty)
 */
 + (void)setDefaultMailAddress:(NSArray *)defaultMailAddress;
 
 /**!
- * @brief   Set the password for the log file (default is empty)
+ * @brief  Set the password for the log file (default is empty)
 */
 + (void)setDefaultLogPassword:(NSString *)defaultLogPassword;
 
 /**!
- * @brief   Send compressed log files to mailbox (default this method is not required if you add the perform the fun `[Logkit addDashboardLogger]`)
+ * @brief  Send compressed log files to mailbox (default this method is not required if you add the perform the fun `[Logkit addDashboardLogger]`)
 */
 + (void)sendLogFilesToMail;
 
