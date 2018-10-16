@@ -211,7 +211,7 @@ static NSString *_defaultLogPassword;
     }];
     [mailSender showFromViewController:UIApplication.sharedApplication.delegate.window.rootViewController completion:nil];
 #else
-    DLogError(@"%@ SSZipArchiver is required", THIS_METHOD);
+    DLogError(@"%@ SSZipArchive is required", THIS_METHOD);
 #endif
 }
 
