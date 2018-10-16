@@ -22,7 +22,6 @@
 
 #import "LogKitAssistiveButton.h"
 #import "LogKitDebugView.h"
-#import "LogKitMacros.h"
 #import "NSBundle+Logkit.h"
 
 @implementation LogKitAssistiveButton {

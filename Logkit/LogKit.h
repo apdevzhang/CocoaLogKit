@@ -43,15 +43,14 @@
 + (void)addASLLogger;
 
 /**!
- * @brief   Configure and add a DDFileLogger (log to a file)
+ * @brief   Configure and add a DDTTYLogger (Apple System Log and Xcode console),if the method has already been executed, there is no need to perform the function 'addASLLogger'
 */
 + (void)addTTYLogger;
 
 /**!
- * @brief   Send the log to the file (default for non debug builds)
+ * @brief   Send the log to the file (default for non debug builds),requied this method if you want send log files to mail
 */
 + (void)addFileLogger;
-
 
 ///-------------------------
 #pragma mark - Mail 
