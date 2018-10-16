@@ -18,9 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [LogKit addTTYLogger];
     
-    [LogKit addFileLogger];
-    
-    [LogKit addASLLogger];
+    [LogKit addFileLogger];    
     
 #ifdef DEBUG
     [LogKit addDashboardLogger];

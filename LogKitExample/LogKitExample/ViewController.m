@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LogKit.h"
 
 @interface ViewController ()
 
@@ -16,8 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    DLogTrace();
+    
+    DLogVerbose(@"verbose level message");
+    DLogDebug(@"debug level message");
+    DLogInfo(@"info level message");
+    DLogWarn(@"warn level message");
+    DLogError(@"error level message");
 }
-
 
 @end
