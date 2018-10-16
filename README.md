@@ -11,6 +11,21 @@ assistiveButton  | debugView | logMail | XcodeConsole |
 -----|-----|-----|-----|
 ![Preview/en_0.png](Preview/en_0.png) | ![Preview/en_1.png](Preview/en_1.png) | ![Preview/en_3.png](Preview/en_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
 
+## Usage
+```
+    DLogTrace();            // ouput current function
+    
+    DLogVerbose(@"");       // ouput verbose level log message
+    
+    DLogDebug(@"");     //  ouput debug level log message
+    
+    DLogInfo(@"");      //  ouput info level log message
+    
+    DLogWarn(@"");      //  ouput warn level log message
+    
+    DLogError(@"");     //  ouput error level log message
+```
+
 ## Configuration
 Configuration Settings in project's AppDelegate.m
 

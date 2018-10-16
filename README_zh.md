@@ -11,6 +11,21 @@
 -----|-----|-----|-----|
 ![Preview/zh_0.png](Preview/zh_0.png) | ![Preview/zh_1.png](Preview/zh_1.png) | ![Preview/zh_3.png](Preview/zh_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
 
+## 使用
+```
+    DLogTrace();            // 输出当前函数名
+    
+    DLogVerbose(@"");       // 输出详细级别日志文本
+    
+    DLogDebug(@"");     //  输出调试级别日志文本
+    
+    DLogInfo(@"");      //  输出信息级别日志文本
+    
+    DLogWarn(@"");      //  输出警告级别日志文本
+    
+    DLogError(@"");     //  输出错误级别日志文本
+```
+
 ## 配置
 在项目AppDelegate.m中进行框架配置
 
