@@ -61,7 +61,7 @@ pod 'CocoaLogKit'
 ## 开源许可
 `LogKit`use [__MIT license__][1]
 
-[1]: https://github.com/skooal/LogKit/LICENSE "MIT License"
+[1]: https://github.com/skooal/LogKit/blob/master/LICENSE "MIT License"
 [2]: https://github.com/robbiehanson/XcodeColors "XcodeColors"
 [3]: https://github.com/CocoaLumberjack/CocoaLumberjack "CocoaLumberjack"
 [4]: https://github.com/ZipArchive/ZipArchive "ZipArchive"
