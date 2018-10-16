@@ -18,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    DLogTrace();
-    
+    DLogTrace();    
     DLogVerbose(@"verbose level message");
     DLogDebug(@"debug level message");
     DLogInfo(@"info level message");
