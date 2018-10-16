@@ -23,8 +23,6 @@
 #ifndef LogKitMacros_h
 #define LogKitMacros_h
 
-#import <DDLog.h>
-
 #ifdef DEBUG
     static const int ddLogLevel = DDLogLevelVerbose;
 #else
