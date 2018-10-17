@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CocoaLogKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Log framework based on CocoaLumberjack and ZipArchive"
   s.homepage     = "https://github.com/skooal/LogKit.git"
   s.license      = "MIT"
