@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "CocoaLogKit"
   s.version      = "0.0.2"
   s.summary      = "Log framework based on CocoaLumberjack and ZipArchive"
-  s.homepage     = "https://github.com/skooal/LogKit.git"
+  s.homepage     = "https://github.com/skooal/LogKit"
   s.license      = "MIT"
   s.author       = { "BANYAN" => "greenbanyan@163.com" }
   s.platform     = :ios,'8.0'
