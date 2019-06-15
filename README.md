@@ -12,7 +12,7 @@ assistiveButton  | debugView | logMail | XcodeConsole |
 ![Preview/en_0.png](Preview/en_0.png) | ![Preview/en_1.png](Preview/en_1.png) | ![Preview/en_3.png](Preview/en_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
 
 ## Usage
-```
+```obj-c
     DLogTrace();            // ouput current function
     
     DLogVerbose(@"");       // ouput verbose level log message
@@ -55,8 +55,6 @@ Configuration Settings in project's AppDelegate.m
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'CocoaLogKit'
-// pod 'CocoaLumberjack'
-// pod 'SSZipArchive'
 ```
 
 ## License

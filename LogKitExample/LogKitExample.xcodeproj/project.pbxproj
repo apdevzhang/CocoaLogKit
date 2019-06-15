@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238C8F0022B53AB400EFF517 /* CocoaLogKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */; };
 		239DC4CA21742DEC0034CCEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4C921742DEC0034CCEE /* AppDelegate.m */; };
 		239DC4CD21742DEC0034CCEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4CC21742DEC0034CCEE /* ViewController.m */; };
 		239DC4D021742DEC0034CCEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DC4CE21742DEC0034CCEE /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0AC412465772644C017DDA70 /* Pods-LogKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogKitExample.debug.xcconfig"; path = "Target Support Files/Pods-LogKitExample/Pods-LogKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		19109B3FDD1D6B4EECDA8D58 /* Pods-LogKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogKitExample.release.xcconfig"; path = "Target Support Files/Pods-LogKitExample/Pods-LogKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLogKit.podspec; path = ../CocoaLogKit.podspec; sourceTree = "<group>"; };
 		239DC4C521742DEC0034CCEE /* LogKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239DC4C821742DEC0034CCEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		239DC4C921742DEC0034CCEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		239DC4BC21742DEC0034CCEE = {
 			isa = PBXGroup;
 			children = (
+				238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */,
 				239DC4DE21742E160034CCEE /* Logkit */,
 				239DC4C721742DEC0034CCEE /* LogKitExample */,
 				239DC4C621742DEC0034CCEE /* Products */,
@@ -229,6 +232,7 @@
 				TargetAttributes = {
 					239DC4C421742DEC0034CCEE = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					239DC4FA217431280034CCEE = {
 						CreatedOnToolsVersion = 10.0;
@@ -264,6 +268,7 @@
 				239DC4D221742DEC0034CCEE /* Assets.xcassets in Resources */,
 				239DC4D021742DEC0034CCEE /* Main.storyboard in Resources */,
 				239DC4F621742E160034CCEE /* Logkit.bundle in Resources */,
+				238C8F0022B53AB400EFF517 /* CocoaLogKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +474,7 @@
 			baseConfigurationReference = 0AC412465772644C017DDA70 /* Pods-LogKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EA45Z66GB;
@@ -481,6 +487,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BANYAN.LogKit.LogKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Logkit/LogKitExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -490,6 +499,7 @@
 			baseConfigurationReference = 19109B3FDD1D6B4EECDA8D58 /* Pods-LogKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4EA45Z66GB;
@@ -502,6 +512,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BANYAN.LogKit.LogKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Logkit/LogKitExample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
