@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LogKit.h"
+#import <CocoaLogKit/LogKit.h>
 
 @interface ViewController ()
 

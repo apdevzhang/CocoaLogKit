@@ -6,6 +6,5 @@ target 'LogKitExample' do
   # use_frameworks!
 
   # Pods for LogKitExample
-pod 'CocoaLumberjack'
-pod 'SSZipArchive'
+pod 'CocoaLogKit'
 end
