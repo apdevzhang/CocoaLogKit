@@ -25,6 +25,7 @@
 @interface LogKitAssistiveButton : UIButton
 
 + (LogKitAssistiveButton *)sharedInstance;
+
 - (void)open;
 
 @end

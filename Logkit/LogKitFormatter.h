@@ -24,8 +24,6 @@
 
 @interface LogKitFormatter : DDDispatchQueueLogFormatter
 
-@property (strong, nonatomic) NSDateFormatter *dateFormatter;
-
-- (NSString *)formatLogMessage:(DDLogMessage *)logMessage;      //  Log output format
+- (NSString *)formatLogMessage:(DDLogMessage *)logMessage;      
 
 @end

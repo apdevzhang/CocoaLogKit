@@ -22,38 +22,64 @@
 
 #import "LogKitFormatter.h"
 
-static NSString *_processName;
+@interface LogKitFormatter ()
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property (copy, nonatomic) NSString *processName;
+@end
 
 @implementation LogKitFormatter
 
-+ (void)initialize {
+#pragma mark - Init
+- (void)initialize {
     if (self == [LogKitFormatter class]) {
-        _processName = [[NSProcessInfo processInfo] processName];
+        self.processName = NSProcessInfo.processInfo.processName;
     }
 }
 
+#pragma mark - Public Methods
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
-    NSString *logLevel;
-
-    self.dateFormatter = NSDateFormatter.new;
-    [self.dateFormatter setDateFormat:@"yyyy:MM:dd HH:mm:ss"];
-    
-    switch (logMessage->_flag) {
-        case DDLogFlagError   : logLevel = @"Error"; break;
-        case DDLogFlagWarning : logLevel = @"Warning"; break;
-        case DDLogFlagInfo    : logLevel = @"Info"; break;
-        case DDLogFlagDebug   : logLevel = @"Debug"; break;
-        default               : logLevel = @"Verbose"; break;
-    }
-    
     return [NSString stringWithFormat:@"%@ %@[%@] %@ %@:%@ %@",
             [self.dateFormatter stringFromDate:logMessage.timestamp],
-            _processName,
+            self.processName,
             [self queueThreadLabelForLogMessage:logMessage],
-            logLevel,
-            logMessage->_fileName,
-            @(logMessage->_line),
-            logMessage->_message];
+            [self formatLogFlag:logMessage.flag],
+            logMessage.fileName,
+            @(logMessage.line),
+            logMessage.message];
+}
+
+#pragma mark - Private Methods
+- (NSString *)formatLogFlag:(DDLogFlag)logFlag {
+    switch (logFlag) {
+        case DDLogFlagError:
+            return @"Error";
+            break;
+            
+        case DDLogFlagWarning:
+            return @"Warnging";
+            break;
+            
+        case DDLogFlagInfo:
+            return @"Info";
+            break;
+            
+        case DDLogFlagDebug:
+            return @"Debug";
+            break;
+            
+        default:
+            return @"Verbose";
+            break;
+    }
+}
+
+#pragma mark - Setter/Getter
+- (NSDateFormatter *)dateFormatter {
+    if (!_dateFormatter) {
+        _dateFormatter = NSDateFormatter.new;
+        [_dateFormatter setDateFormat:@"yyyy:MM:dd HH:mm:ss"];
+    }
+    return _dateFormatter;
 }
 
 @end

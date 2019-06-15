@@ -24,9 +24,11 @@
 #import "LogKitDebugView.h"
 #import "NSBundle+Logkit.h"
 
-@implementation LogKitAssistiveButton {
-    UIEdgeInsets _safeAreaInsets;
-}
+@interface LogKitAssistiveButton ()
+@property (assign, nonatomic) UIEdgeInsets safeAreaInsets;
+@end
+
+@implementation LogKitAssistiveButton
 
 #pragma mark - Init
 + (LogKitAssistiveButton *)sharedInstance {
@@ -40,9 +42,12 @@
 
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        [self commonInit];
+    if (!self) {
+        return nil;
     }
+    
+    [self commonInit];
+    
     return self;
 }
 

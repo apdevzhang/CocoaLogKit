@@ -57,24 +57,30 @@
 
 + (UIImage *)log_assistiveButtonImage {
     static UIImage *assistiveButtonImage = nil;
+    
     if (assistiveButtonImage == nil) {
         assistiveButtonImage = [[UIImage imageWithContentsOfFile:[[self logkitBundle] pathForResource:@"log_assistive_btn@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     }
+    
     return assistiveButtonImage;
 }
 
 + (UIImage *)log_closeButtonImage {
     static UIImage *closeButtonImage = nil;
+    
     if (closeButtonImage == nil) {
         closeButtonImage = [[UIImage imageWithContentsOfFile:[[self logkitBundle] pathForResource:@"log_close_btn@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     }
+    
     return closeButtonImage;
 }
 
-#pragma mark - Private methods
+#pragma mark - Private Methods
 + (NSBundle *)bundleWithName:(NSString *)name {
     NSString *mainBundlePath = [[NSBundle mainBundle] resourcePath];
+    
     NSString *logKitBundlePath = [mainBundlePath stringByAppendingPathComponent:name];
+    
     if ([[NSFileManager defaultManager] fileExistsAtPath:logKitBundlePath]) {
         return [NSBundle bundleWithPath:logKitBundlePath];
     }

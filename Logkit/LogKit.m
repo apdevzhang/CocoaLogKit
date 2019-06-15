@@ -24,12 +24,10 @@
 #import <CocoaLumberjack/DDTTYLogger.h>
 #import <CocoaLumberjack/DDFileLogger.h>
 #import <CocoaLumberjack/DDASLLogger.h>
+#import <SSZipArchive/SSZipArchive.h>
 #import "LogKitConsoleLogger.h"
 #import "LogKitDebugView.h"
 #import "LogKitAssistiveButton.h"
-#if __has_include(<SSZipArchive/SSZipArchive.h>)
-    #import <SSZipArchive/SSZipArchive.h>
-#endif
 
 static NSArray *_defaultMailAddress;
 static NSString *_defaultLogPassword;
@@ -149,7 +147,6 @@ static NSString *_defaultLogPassword;
 }
 
 + (void)sendLogFilesToMail:(NSArray *)mailAddress password:(NSString *)password {
-#if __has_include(<SSZipArchive/SSZipArchive.h>)
     NSString *logDirectory = [self logDirectory];
     NSArray *logFileNames = [self logFileNames];
     
@@ -210,9 +207,6 @@ static NSString *_defaultLogPassword;
         [controller dismissViewControllerAnimated:YES completion:nil];
     }];
     [mailSender showFromViewController:UIApplication.sharedApplication.delegate.window.rootViewController completion:nil];
-#else
-    DLogError(@"%@ SSZipArchive is required", THIS_METHOD);
-#endif
 }
 
 @end

@@ -23,34 +23,14 @@
 #import "LogKitConsoleLogger.h"
 #import "LogKitFormatter.h"
 
-@interface LogKitConsoleLogger () <UITableViewDataSource, UITableViewDelegate> {
-    UITableView *tableView;
-    NSMutableArray *messages;
-}
+@interface LogKitConsoleLogger () <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *messages;
 @end
 
 @implementation LogKitConsoleLogger
 
-#pragma mark - Synthesize
 @synthesize logFormatter;
-- (void)logMessage:(DDLogMessage *)logMessage {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self->messages addObject:logMessage];
-        
-        BOOL scroll = NO;
-        
-        if (self->tableView.contentOffset.y + self->tableView.bounds.size.height >= self->tableView.contentSize.height) {
-            scroll = YES;
-        }
-        
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self->messages.count - 1 inSection:0];
-        [self->tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
-        
-        if (scroll) {
-            [self->tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-        }
-    });
-}
 
 #pragma mark - Init
 + (LogKitConsoleLogger *)sharedInstance {
@@ -62,90 +42,128 @@
     return sharedInstance;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    [self commonInit];
-    
-    return self;
-}
-
-- (void)commonInit {
-    messages = NSMutableArray.new;
-    
-    tableView = UITableView.new;
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.backgroundColor = UIColor.whiteColor;
-    tableView.alpha = 0.8;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-}
-
-#pragma mark - UITableViewDataSource
+#pragma mark - Delegate
+#pragma mark   UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return messages.count;
+    return self.messages.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class)];
+    
     [self configureCell:cell forRowAtIndexPath:indexPath];
+    
     return cell;
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark   UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *messageText = [self textOfMessageForIndexPath:indexPath];
+    DDLogMessage *message = self.messages[indexPath.row];
     
     CGFloat messageMargin = 10.0;
     
-    return ceil([messageText boundingRectWithSize:CGSizeMake(tableView.bounds.size.width - 30, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [self fontOfMessage]} context:nil].size.height + messageMargin);
+    return ceil([[self textOfMessage:message] boundingRectWithSize:CGSizeMake(tableView.bounds.size.width - 30, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [self fontOfMessage]} context:nil].size.height + messageMargin);
 }
 
 #pragma mark - Public Methods
 - (void)showConsoleLoggerInView:(UIView *)view {
-    [view addSubview:tableView];
-    UITableView *consoleLoggerTableView = tableView;
-    consoleLoggerTableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [view addSubview:self.tableView];
+    
+    UITableView *consoleLoggerTableView = self.tableView;
+    
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[consoleLoggerTableView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(consoleLoggerTableView)]];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[consoleLoggerTableView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(consoleLoggerTableView)]];
 }
 
 - (void)clearConsoleLogger {
-    [messages removeAllObjects];
-    [tableView reloadData];
+    [self.messages removeAllObjects];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Private Methods
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
-    DDLogMessage *message = messages[indexPath.row];
-    switch (message.flag) {
-        case DDLogFlagError: cell.textLabel.textColor = DLOG_ERROR_COLOR; break;
-        case DDLogFlagWarning: cell.textLabel.textColor = DLOG_WARNING_COLOR; break;
-        case DDLogFlagInfo: cell.textLabel.textColor = DLOG_INFO_COLOR; break;
-        case DDLogFlagDebug: cell.textLabel.textColor = DLOG_DEBUG_COLOR; break;
-        case DDLogFlagVerbose: cell.textLabel.textColor = DLOG_VERBOSE_COLOR; break;
-        default: cell.textLabel.textColor = UIColor.whiteColor; break;
-    }
-    cell.textLabel.text = [self textOfMessageForIndexPath:indexPath];
+    DDLogMessage *message = self.messages[indexPath.row];
+
+    cell.textLabel.text = [self textOfMessage:message];
     cell.textLabel.font = [self fontOfMessage];
+    cell.textLabel.textColor = [self colorOfMessage:message.flag];
     cell.textLabel.numberOfLines = 0;
     cell.backgroundColor = UIColor.clearColor;
 }
 
-- (NSString *)textOfMessageForIndexPath:(NSIndexPath *)indexPath {
-    DDLogMessage *message = messages[indexPath.row];
-    
+- (void)logMessage:(DDLogMessage *)logMessage {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.messages addObject:logMessage];
+        
+        BOOL scroll = (self.tableView.contentOffset.y + self.tableView.bounds.size.height >= self.tableView.contentSize.height) ? YES : NO;
+            
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.messages.count - 1 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+      
+        scroll ?: [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    });
+}
+
+#pragma mark   Message Attribute
+- (NSString *)textOfMessage:(DDLogMessage *)message {
     LogKitFormatter *formatter = LogKitFormatter.new;
     
     return [formatter formatLogMessage:message];
 }
 
 - (UIFont *)fontOfMessage {
-    return [UIFont boldSystemFontOfSize:9];
+    return [UIFont boldSystemFontOfSize:10.];
+}
+
+- (UIColor *)colorOfMessage:(DDLogFlag)logFlag {
+    switch (logFlag) {
+        case DDLogFlagError:
+            return DLOG_ERROR_COLOR;
+            break;
+            
+        case DDLogFlagWarning:
+            return DLOG_WARNING_COLOR;
+            break;
+            
+        case DDLogFlagInfo:
+            return DLOG_INFO_COLOR;
+            break;
+            
+        case DDLogFlagDebug:
+            return DLOG_DEBUG_COLOR;
+            break;
+            
+        case DDLogFlagVerbose:
+            return DLOG_VERBOSE_COLOR;
+            break;
+            
+        default:
+            return UIColor.whiteColor;
+            break;
+    }
+}
+    
+#pragma mark - Setter/Getter
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = UIColor.whiteColor;
+        _tableView.alpha = 0.8;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _tableView;
+}
+
+- (NSMutableArray *)messages {
+    if (!_messages) {
+        _messages = NSMutableArray.new;
+    }
+    return _messages;
 }
 
 @end

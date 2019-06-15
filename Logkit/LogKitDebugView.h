@@ -25,9 +25,8 @@
 @interface LogKitDebugView : UIView
 
 + (LogKitDebugView *)sharedInstance;
+
 - (void)open;
 - (void)close;
-
-@property (strong, nonatomic) UIView *consoleLoggerView;
 
 @end
