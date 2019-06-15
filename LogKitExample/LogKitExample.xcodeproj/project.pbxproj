@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2332F17122B542A600D56004 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16722B542A600D56004 /* README.md */; };
+		2332F17222B542A600D56004 /* en_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16922B542A600D56004 /* en_2.png */; };
+		2332F17322B542A600D56004 /* en_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16A22B542A600D56004 /* en_0.png */; };
+		2332F17422B542A600D56004 /* en_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16B22B542A600D56004 /* en_1.png */; };
+		2332F17522B542A600D56004 /* zh_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16C22B542A600D56004 /* zh_2.png */; };
+		2332F17622B542A600D56004 /* xcode_console.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16D22B542A600D56004 /* xcode_console.png */; };
+		2332F17722B542A600D56004 /* zh_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16E22B542A600D56004 /* zh_1.png */; };
+		2332F17822B542A600D56004 /* zh_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332F16F22B542A600D56004 /* zh_0.png */; };
+		2332F17922B542A600D56004 /* README_zh.md in Resources */ = {isa = PBXBuildFile; fileRef = 2332F17022B542A600D56004 /* README_zh.md */; };
 		238C8F0022B53AB400EFF517 /* CocoaLogKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */; };
 		239DC4CA21742DEC0034CCEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4C921742DEC0034CCEE /* AppDelegate.m */; };
 		239DC4CD21742DEC0034CCEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4CC21742DEC0034CCEE /* ViewController.m */; };
@@ -14,14 +23,6 @@
 		239DC4D221742DEC0034CCEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 239DC4D121742DEC0034CCEE /* Assets.xcassets */; };
 		239DC4D521742DEC0034CCEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DC4D321742DEC0034CCEE /* LaunchScreen.storyboard */; };
 		239DC4D821742DEC0034CCEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4D721742DEC0034CCEE /* main.m */; };
-		239DC4EF21742E160034CCEE /* LogKitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4E121742E160034CCEE /* LogKitFormatter.m */; };
-		239DC4F021742E160034CCEE /* NSBundle+Logkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4E421742E160034CCEE /* NSBundle+Logkit.m */; };
-		239DC4F121742E160034CCEE /* LogKitAssistiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4E521742E160034CCEE /* LogKitAssistiveButton.m */; };
-		239DC4F221742E160034CCEE /* LogKitDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4E721742E160034CCEE /* LogKitDebugView.m */; };
-		239DC4F321742E160034CCEE /* LogKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4E821742E160034CCEE /* LogKit.m */; };
-		239DC4F421742E160034CCEE /* LogKitConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4EA21742E160034CCEE /* LogKitConsoleLogger.m */; };
-		239DC4F521742E160034CCEE /* LogKitMailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 239DC4EB21742E160034CCEE /* LogKitMailSender.m */; };
-		239DC4F621742E160034CCEE /* Logkit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 239DC4EC21742E160034CCEE /* Logkit.bundle */; };
 		239DC506217432920034CCEE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC505217432920034CCEE /* libz.tbd */; };
 		239DC508217432980034CCEE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC507217432980034CCEE /* MessageUI.framework */; };
 		239DC50A2174329E0034CCEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC5092174329E0034CCEE /* UIKit.framework */; };
@@ -42,6 +43,15 @@
 /* Begin PBXFileReference section */
 		0AC412465772644C017DDA70 /* Pods-LogKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogKitExample.debug.xcconfig"; path = "Target Support Files/Pods-LogKitExample/Pods-LogKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		19109B3FDD1D6B4EECDA8D58 /* Pods-LogKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogKitExample.release.xcconfig"; path = "Target Support Files/Pods-LogKitExample/Pods-LogKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		2332F16722B542A600D56004 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2332F16922B542A600D56004 /* en_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_2.png; sourceTree = "<group>"; };
+		2332F16A22B542A600D56004 /* en_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_0.png; sourceTree = "<group>"; };
+		2332F16B22B542A600D56004 /* en_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_1.png; sourceTree = "<group>"; };
+		2332F16C22B542A600D56004 /* zh_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_2.png; sourceTree = "<group>"; };
+		2332F16D22B542A600D56004 /* xcode_console.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcode_console.png; sourceTree = "<group>"; };
+		2332F16E22B542A600D56004 /* zh_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_1.png; sourceTree = "<group>"; };
+		2332F16F22B542A600D56004 /* zh_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_0.png; sourceTree = "<group>"; };
+		2332F17022B542A600D56004 /* README_zh.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README_zh.md; path = ../README_zh.md; sourceTree = "<group>"; };
 		238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLogKit.podspec; path = ../CocoaLogKit.podspec; sourceTree = "<group>"; };
 		239DC4C521742DEC0034CCEE /* LogKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239DC4C821742DEC0034CCEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,22 +63,6 @@
 		239DC4D421742DEC0034CCEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		239DC4D621742DEC0034CCEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239DC4D721742DEC0034CCEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		239DC4DF21742E160034CCEE /* LogKitConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitConsoleLogger.h; sourceTree = "<group>"; };
-		239DC4E021742E160034CCEE /* LogKitMailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitMailSender.h; sourceTree = "<group>"; };
-		239DC4E121742E160034CCEE /* LogKitFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitFormatter.m; sourceTree = "<group>"; };
-		239DC4E221742E160034CCEE /* LogKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKit.h; sourceTree = "<group>"; };
-		239DC4E321742E160034CCEE /* LogKitDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitDebugView.h; sourceTree = "<group>"; };
-		239DC4E421742E160034CCEE /* NSBundle+Logkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Logkit.m"; sourceTree = "<group>"; };
-		239DC4E521742E160034CCEE /* LogKitAssistiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitAssistiveButton.m; sourceTree = "<group>"; };
-		239DC4E621742E160034CCEE /* LogKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitMacros.h; sourceTree = "<group>"; };
-		239DC4E721742E160034CCEE /* LogKitDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitDebugView.m; sourceTree = "<group>"; };
-		239DC4E821742E160034CCEE /* LogKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKit.m; sourceTree = "<group>"; };
-		239DC4E921742E160034CCEE /* LogKitFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitFormatter.h; sourceTree = "<group>"; };
-		239DC4EA21742E160034CCEE /* LogKitConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitConsoleLogger.m; sourceTree = "<group>"; };
-		239DC4EB21742E160034CCEE /* LogKitMailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitMailSender.m; sourceTree = "<group>"; };
-		239DC4EC21742E160034CCEE /* Logkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Logkit.bundle; sourceTree = "<group>"; };
-		239DC4ED21742E160034CCEE /* NSBundle+Logkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Logkit.h"; sourceTree = "<group>"; };
-		239DC4EE21742E160034CCEE /* LogKitAssistiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitAssistiveButton.h; sourceTree = "<group>"; };
 		239DC4FB217431280034CCEE /* LogKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		239DC505217432920034CCEE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		239DC507217432980034CCEE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -100,11 +94,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2332F16822B542A600D56004 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				2332F16922B542A600D56004 /* en_2.png */,
+				2332F16A22B542A600D56004 /* en_0.png */,
+				2332F16B22B542A600D56004 /* en_1.png */,
+				2332F16C22B542A600D56004 /* zh_2.png */,
+				2332F16D22B542A600D56004 /* xcode_console.png */,
+				2332F16E22B542A600D56004 /* zh_1.png */,
+				2332F16F22B542A600D56004 /* zh_0.png */,
+			);
+			name = Preview;
+			path = ../Preview;
+			sourceTree = "<group>";
+		};
 		239DC4BC21742DEC0034CCEE = {
 			isa = PBXGroup;
 			children = (
+				2332F17022B542A600D56004 /* README_zh.md */,
+				2332F16722B542A600D56004 /* README.md */,
 				238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */,
-				239DC4DE21742E160034CCEE /* Logkit */,
+				2332F16822B542A600D56004 /* Preview */,
 				239DC4C721742DEC0034CCEE /* LogKitExample */,
 				239DC4C621742DEC0034CCEE /* Products */,
 				E0EA99EA622606AF9FBCAE48 /* Pods */,
@@ -135,30 +146,6 @@
 				239DC4D721742DEC0034CCEE /* main.m */,
 			);
 			path = LogKitExample;
-			sourceTree = "<group>";
-		};
-		239DC4DE21742E160034CCEE /* Logkit */ = {
-			isa = PBXGroup;
-			children = (
-				239DC4EC21742E160034CCEE /* Logkit.bundle */,
-				239DC4E221742E160034CCEE /* LogKit.h */,
-				239DC4E821742E160034CCEE /* LogKit.m */,
-				239DC4EE21742E160034CCEE /* LogKitAssistiveButton.h */,
-				239DC4E521742E160034CCEE /* LogKitAssistiveButton.m */,
-				239DC4DF21742E160034CCEE /* LogKitConsoleLogger.h */,
-				239DC4EA21742E160034CCEE /* LogKitConsoleLogger.m */,
-				239DC4E321742E160034CCEE /* LogKitDebugView.h */,
-				239DC4E721742E160034CCEE /* LogKitDebugView.m */,
-				239DC4E921742E160034CCEE /* LogKitFormatter.h */,
-				239DC4E121742E160034CCEE /* LogKitFormatter.m */,
-				239DC4E621742E160034CCEE /* LogKitMacros.h */,
-				239DC4E021742E160034CCEE /* LogKitMailSender.h */,
-				239DC4EB21742E160034CCEE /* LogKitMailSender.m */,
-				239DC4ED21742E160034CCEE /* NSBundle+Logkit.h */,
-				239DC4E421742E160034CCEE /* NSBundle+Logkit.m */,
-			);
-			name = Logkit;
-			path = ../Logkit;
 			sourceTree = "<group>";
 		};
 		DD8A850EAA4591AFE5C5BDB6 /* Frameworks */ = {
@@ -266,9 +253,17 @@
 			files = (
 				239DC4D521742DEC0034CCEE /* LaunchScreen.storyboard in Resources */,
 				239DC4D221742DEC0034CCEE /* Assets.xcassets in Resources */,
+				2332F17922B542A600D56004 /* README_zh.md in Resources */,
+				2332F17522B542A600D56004 /* zh_2.png in Resources */,
+				2332F17722B542A600D56004 /* zh_1.png in Resources */,
+				2332F17122B542A600D56004 /* README.md in Resources */,
+				2332F17322B542A600D56004 /* en_0.png in Resources */,
+				2332F17622B542A600D56004 /* xcode_console.png in Resources */,
 				239DC4D021742DEC0034CCEE /* Main.storyboard in Resources */,
-				239DC4F621742E160034CCEE /* Logkit.bundle in Resources */,
+				2332F17822B542A600D56004 /* zh_0.png in Resources */,
 				238C8F0022B53AB400EFF517 /* CocoaLogKit.podspec in Resources */,
+				2332F17422B542A600D56004 /* en_1.png in Resources */,
+				2332F17222B542A600D56004 /* en_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,16 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				239DC4F421742E160034CCEE /* LogKitConsoleLogger.m in Sources */,
-				239DC4F221742E160034CCEE /* LogKitDebugView.m in Sources */,
 				239DC4CD21742DEC0034CCEE /* ViewController.m in Sources */,
-				239DC4F521742E160034CCEE /* LogKitMailSender.m in Sources */,
 				239DC4D821742DEC0034CCEE /* main.m in Sources */,
-				239DC4EF21742E160034CCEE /* LogKitFormatter.m in Sources */,
-				239DC4F021742E160034CCEE /* NSBundle+Logkit.m in Sources */,
-				239DC4F321742E160034CCEE /* LogKit.m in Sources */,
 				239DC4CA21742DEC0034CCEE /* AppDelegate.m in Sources */,
-				239DC4F121742E160034CCEE /* LogKitAssistiveButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
