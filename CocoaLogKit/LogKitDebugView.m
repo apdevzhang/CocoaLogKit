@@ -99,6 +99,7 @@
         [LogKitConsoleLogger.sharedInstance clearConsoleLogger];
     } else if (index == 1) {
         [self removeFromSuperview];
+        
         [LogKit sendLogFilesToMail];
     }
 }

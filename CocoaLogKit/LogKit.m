@@ -191,7 +191,7 @@ static NSString *_defaultLogPassword;
     
     NSData *logData = [NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@.zip", [logSaveDirectory stringByAppendingPathComponent:[NSBundle log_localizedStringForKey:@"LogFile"]]]];
     
-    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     

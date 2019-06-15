@@ -29,13 +29,6 @@
 
 @implementation LogKitFormatter
 
-#pragma mark - Init
-- (void)initialize {
-    if (self == [LogKitFormatter class]) {
-        self.processName = NSProcessInfo.processInfo.processName;
-    }
-}
-
 #pragma mark - Public Methods
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
     return [NSString stringWithFormat:@"%@ %@[%@] %@ %@:%@ %@",
@@ -56,7 +49,7 @@
             break;
             
         case DDLogFlagWarning:
-            return @"Warnging";
+            return @"Warning";
             break;
             
         case DDLogFlagInfo:
@@ -80,6 +73,13 @@
         [_dateFormatter setDateFormat:@"yyyy:MM:dd HH:mm:ss"];
     }
     return _dateFormatter;
+}
+
+- (NSString *)processName {
+    if (!_processName) {
+        _processName = NSProcessInfo.processInfo.processName;
+    }
+    return _processName;
 }
 
 @end
