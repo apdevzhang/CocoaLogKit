@@ -7,6 +7,11 @@
 - 根据日志级别，在Xcode控制台或iPhone中输出不同颜色的日志信息(若要在Xcode控制台输出不同的颜色则依赖[__XcodeColors__][2]插件)
 
 ## 预览
+GIF |
+----------------------|
+![Preview/example.gif](Preview/example.gif = 300 x 300)|
+
+
 辅助按钮  | 调试视图 | 发送日志 | Xcode控制台 |
 -----|-----|-----|-----|
 ![Preview/zh_0.png](Preview/zh_0.png) | ![Preview/zh_1.png](Preview/zh_1.png) | ![Preview/zh_3.png](Preview/zh_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
@@ -57,7 +62,7 @@ pod 'CocoaLogKit'
 ```
 
 ## 开源许可
-`LogKit`use [__MIT license__][1]
+`CocoaLogKit`use [__MIT license__][1]
 
 [1]: https://github.com/skooal/LogKit/blob/master/LICENSE "MIT License"
 [2]: https://github.com/robbiehanson/XcodeColors "XcodeColors"
