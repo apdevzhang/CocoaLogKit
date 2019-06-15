@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
   s.author       = { "BANYAN" => "greenbanyan@163.com" }
   s.platform     = :ios,'8.0'
   s.source       = { :git => "https://github.com/skooal/LogKit.git", :tag => s.version }
-  s.source_files = "LogKit/**/*.{h,m}"
-  s.resource     = "LogKit/LogKit.bundle"
+  s.source_files = "CocoaLogKit/**/*.{h,m}"
+  s.resource     = "CocoaLogKit/LogKit.bundle"
   s.dependency 'CocoaLumberjack', '>= 3.x'
   s.dependency 'SSZipArchive', '>= 2.x'
   s.requires_arc = true
