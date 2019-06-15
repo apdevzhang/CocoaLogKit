@@ -9,7 +9,7 @@ Log framework based on [CocoaLumberjack][3] and [ZipArchive][4]
 ## Preview
 GIF |
 ----------------------|
-![Preview/example.gif](Preview/example.gif)|
+![DebugView](Preview/debugView.gif)|
 
 assistiveButton  | debugView | logMail | XcodeConsole |
 -----|-----|-----|-----|
