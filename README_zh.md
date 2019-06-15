@@ -12,7 +12,7 @@
 ![Preview/zh_0.png](Preview/zh_0.png) | ![Preview/zh_1.png](Preview/zh_1.png) | ![Preview/zh_3.png](Preview/zh_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
 
 ## 使用
-```
+```obj-c
     DLogTrace();            // 输出当前函数名
     
     DLogVerbose(@"");       // 输出详细级别日志文本
@@ -54,8 +54,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'CocoaLogKit'
-// pod 'CocoaLumberjack'
-// pod 'SSZipArchive'
 ```
 
 ## 开源许可
