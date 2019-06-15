@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.source_files = "LogKit/**/*.{h,m}"
   s.resource     = "LogKit/LogKit.bundle"
   s.dependency 'CocoaLumberjack', '>= 3.x'
+  s.dependency 'SSZipArchive', '>= 2.x'
   s.requires_arc = true
 end
