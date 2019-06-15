@@ -7,6 +7,10 @@ Log framework based on [CocoaLumberjack][3] and [ZipArchive][4]
 - Output different log information with corresponding colors in the Xcode console or iPhone depending on the log level(Xcode console required[__XcodeColors__][2] plug-in)
 
 ## Preview
+GIF |
+----------------------|
+![Preview/example.gif](Preview/example.gif)|
+
 assistiveButton  | debugView | logMail | XcodeConsole |
 -----|-----|-----|-----|
 ![Preview/en_0.png](Preview/en_0.png) | ![Preview/en_1.png](Preview/en_1.png) | ![Preview/en_3.png](Preview/en_2.png) | ![Preview/xcode_console.png](Preview/xcode_console.png) |
@@ -58,7 +62,7 @@ pod 'CocoaLogKit'
 ```
 
 ## License
-`LogKit`use [__MIT license__][1]
+`CocoaLogKit`use [__MIT license__][1]
 
 [1]: https://github.com/skooal/LogKit/blob/master/LICENSE "MIT License"
 [2]: https://github.com/robbiehanson/XcodeColors "XcodeColors"
