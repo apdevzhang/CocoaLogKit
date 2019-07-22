@@ -36,19 +36,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = LogKitAssistiveButton.new;
+        
+        [sharedInstance commonInit];
     });
     return sharedInstance;
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    [self commonInit];
-    
-    return self;
 }
 
 - (void)commonInit {

@@ -40,19 +40,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[LogKitDebugView alloc] init];
+        
+        [sharedInstance commonInit];
     });
     return sharedInstance;
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    [self commonInit];
-    
-    return self;
 }
 
 - (void)commonInit {
@@ -67,7 +58,7 @@
     self.gradientLayer.frame = self.navigationView.bounds;
     [self.navigationView.layer addSublayer:self.gradientLayer];
     
-    self.closeButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 44 - 10, [self sizeAdaptation] ? 45 : 20, 20, 20);
+    self.closeButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 44 - 10, [self sizeAdaptation] ? 45 : 25, 20, 20);
     [self.navigationView addSubview:self.closeButton];
     
     self.segementedControl.frame = CGRectMake((self.navigationView.frame.size.width - 160) / 2, [self sizeAdaptation] ? 40 : 20, 160, 30);
