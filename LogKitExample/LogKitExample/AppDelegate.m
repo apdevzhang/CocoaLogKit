@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import <CocoaLogKit/LogKit.h>
+//#import <CocoaLogKit/LogKit.h>
+#import "LogKit.h"
 
 @interface AppDelegate ()
 

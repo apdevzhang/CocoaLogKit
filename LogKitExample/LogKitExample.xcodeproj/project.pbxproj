@@ -27,6 +27,14 @@
 		239DC508217432980034CCEE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC507217432980034CCEE /* MessageUI.framework */; };
 		239DC50A2174329E0034CCEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC5092174329E0034CCEE /* UIKit.framework */; };
 		239DC50C217432A30034CCEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239DC50B217432A30034CCEE /* Foundation.framework */; };
+		23DF729222E5969500FB5A78 /* LogKitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728422E5969500FB5A78 /* LogKitFormatter.m */; };
+		23DF729322E5969500FB5A78 /* NSBundle+Logkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728722E5969500FB5A78 /* NSBundle+Logkit.m */; };
+		23DF729422E5969500FB5A78 /* LogKitAssistiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728822E5969500FB5A78 /* LogKitAssistiveButton.m */; };
+		23DF729522E5969500FB5A78 /* LogKitDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728A22E5969500FB5A78 /* LogKitDebugView.m */; };
+		23DF729622E5969500FB5A78 /* LogKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728B22E5969500FB5A78 /* LogKit.m */; };
+		23DF729722E5969500FB5A78 /* LogKitConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728D22E5969500FB5A78 /* LogKitConsoleLogger.m */; };
+		23DF729822E5969500FB5A78 /* LogKitMailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DF728E22E5969500FB5A78 /* LogKitMailSender.m */; };
+		23DF729922E5969500FB5A78 /* Logkit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23DF728F22E5969500FB5A78 /* Logkit.bundle */; };
 		DC3BA49DBF4A0BF1BF3E4673 /* libPods-LogKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2F2ED20DE703A59C935F18 /* libPods-LogKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +60,8 @@
 		2332F16E22B542A600D56004 /* zh_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_1.png; sourceTree = "<group>"; };
 		2332F16F22B542A600D56004 /* zh_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_0.png; sourceTree = "<group>"; };
 		2332F17022B542A600D56004 /* README_zh.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README_zh.md; path = ../README_zh.md; sourceTree = "<group>"; };
+		2332F17A22B543BB00D56004 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		2332F17B22B543BC00D56004 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLogKit.podspec; path = ../CocoaLogKit.podspec; sourceTree = "<group>"; };
 		239DC4C521742DEC0034CCEE /* LogKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239DC4C821742DEC0034CCEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +78,22 @@
 		239DC507217432980034CCEE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		239DC5092174329E0034CCEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		239DC50B217432A30034CCEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		23DF728222E5969500FB5A78 /* LogKitConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitConsoleLogger.h; sourceTree = "<group>"; };
+		23DF728322E5969500FB5A78 /* LogKitMailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitMailSender.h; sourceTree = "<group>"; };
+		23DF728422E5969500FB5A78 /* LogKitFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitFormatter.m; sourceTree = "<group>"; };
+		23DF728522E5969500FB5A78 /* LogKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKit.h; sourceTree = "<group>"; };
+		23DF728622E5969500FB5A78 /* LogKitDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitDebugView.h; sourceTree = "<group>"; };
+		23DF728722E5969500FB5A78 /* NSBundle+Logkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Logkit.m"; sourceTree = "<group>"; };
+		23DF728822E5969500FB5A78 /* LogKitAssistiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitAssistiveButton.m; sourceTree = "<group>"; };
+		23DF728922E5969500FB5A78 /* LogKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitMacros.h; sourceTree = "<group>"; };
+		23DF728A22E5969500FB5A78 /* LogKitDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitDebugView.m; sourceTree = "<group>"; };
+		23DF728B22E5969500FB5A78 /* LogKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKit.m; sourceTree = "<group>"; };
+		23DF728C22E5969500FB5A78 /* LogKitFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitFormatter.h; sourceTree = "<group>"; };
+		23DF728D22E5969500FB5A78 /* LogKitConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitConsoleLogger.m; sourceTree = "<group>"; };
+		23DF728E22E5969500FB5A78 /* LogKitMailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogKitMailSender.m; sourceTree = "<group>"; };
+		23DF728F22E5969500FB5A78 /* Logkit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Logkit.bundle; sourceTree = "<group>"; };
+		23DF729022E5969500FB5A78 /* NSBundle+Logkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Logkit.h"; sourceTree = "<group>"; };
+		23DF729122E5969500FB5A78 /* LogKitAssistiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogKitAssistiveButton.h; sourceTree = "<group>"; };
 		EF2F2ED20DE703A59C935F18 /* libPods-LogKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +142,7 @@
 				2332F16722B542A600D56004 /* README.md */,
 				238C8EFF22B53AB400EFF517 /* CocoaLogKit.podspec */,
 				2332F16822B542A600D56004 /* Preview */,
+				23DF728122E5969500FB5A78 /* CocoaLogKit */,
 				239DC4C721742DEC0034CCEE /* LogKitExample */,
 				239DC4C621742DEC0034CCEE /* Products */,
 				E0EA99EA622606AF9FBCAE48 /* Pods */,
@@ -146,6 +173,30 @@
 				239DC4D721742DEC0034CCEE /* main.m */,
 			);
 			path = LogKitExample;
+			sourceTree = "<group>";
+		};
+		23DF728122E5969500FB5A78 /* CocoaLogKit */ = {
+			isa = PBXGroup;
+			children = (
+				23DF728F22E5969500FB5A78 /* Logkit.bundle */,
+				23DF728522E5969500FB5A78 /* LogKit.h */,
+				23DF728B22E5969500FB5A78 /* LogKit.m */,
+				23DF729122E5969500FB5A78 /* LogKitAssistiveButton.h */,
+				23DF728822E5969500FB5A78 /* LogKitAssistiveButton.m */,
+				23DF728222E5969500FB5A78 /* LogKitConsoleLogger.h */,
+				23DF728D22E5969500FB5A78 /* LogKitConsoleLogger.m */,
+				23DF728622E5969500FB5A78 /* LogKitDebugView.h */,
+				23DF728A22E5969500FB5A78 /* LogKitDebugView.m */,
+				23DF728C22E5969500FB5A78 /* LogKitFormatter.h */,
+				23DF728422E5969500FB5A78 /* LogKitFormatter.m */,
+				23DF728922E5969500FB5A78 /* LogKitMacros.h */,
+				23DF728322E5969500FB5A78 /* LogKitMailSender.h */,
+				23DF728E22E5969500FB5A78 /* LogKitMailSender.m */,
+				23DF729022E5969500FB5A78 /* NSBundle+Logkit.h */,
+				23DF728722E5969500FB5A78 /* NSBundle+Logkit.m */,
+			);
+			name = CocoaLogKit;
+			path = ../CocoaLogKit;
 			sourceTree = "<group>";
 		};
 		DD8A850EAA4591AFE5C5BDB6 /* Frameworks */ = {
@@ -234,6 +285,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 239DC4BC21742DEC0034CCEE;
 			productRefGroup = 239DC4C621742DEC0034CCEE /* Products */;
@@ -256,6 +308,7 @@
 				2332F17922B542A600D56004 /* README_zh.md in Resources */,
 				2332F17522B542A600D56004 /* zh_2.png in Resources */,
 				2332F17722B542A600D56004 /* zh_1.png in Resources */,
+				23DF729922E5969500FB5A78 /* Logkit.bundle in Resources */,
 				2332F17122B542A600D56004 /* README.md in Resources */,
 				2332F17322B542A600D56004 /* en_0.png in Resources */,
 				2332F17622B542A600D56004 /* xcode_console.png in Resources */,
@@ -302,9 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DF729722E5969500FB5A78 /* LogKitConsoleLogger.m in Sources */,
+				23DF729522E5969500FB5A78 /* LogKitDebugView.m in Sources */,
 				239DC4CD21742DEC0034CCEE /* ViewController.m in Sources */,
+				23DF729822E5969500FB5A78 /* LogKitMailSender.m in Sources */,
 				239DC4D821742DEC0034CCEE /* main.m in Sources */,
+				23DF729222E5969500FB5A78 /* LogKitFormatter.m in Sources */,
+				23DF729322E5969500FB5A78 /* NSBundle+Logkit.m in Sources */,
+				23DF729622E5969500FB5A78 /* LogKit.m in Sources */,
 				239DC4CA21742DEC0034CCEE /* AppDelegate.m in Sources */,
+				23DF729422E5969500FB5A78 /* LogKitAssistiveButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +390,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				239DC4CF21742DEC0034CCEE /* Base */,
+				2332F17A22B543BB00D56004 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -338,6 +399,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				239DC4D421742DEC0034CCEE /* Base */,
+				2332F17B22B543BC00D56004 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -349,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -396,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -408,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -449,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -465,9 +529,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4EA45Z66GB;
+				DEVELOPMENT_TEAM = Q6J92FA9UY;
 				INFOPLIST_FILE = LogKitExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,9 +554,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4EA45Z66GB;
+				DEVELOPMENT_TEAM = Q6J92FA9UY;
 				INFOPLIST_FILE = LogKitExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
